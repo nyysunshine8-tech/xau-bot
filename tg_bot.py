@@ -140,7 +140,7 @@ def main():
     if args.once:
         if not CHAT:
             raise SystemExit("Set TELEGRAM_CHAT_ID first.")
-        scan(set(), CHAT)
+        scan(set(), CHAT)os.environ.get("GITHUB_EVENT_NAME") == "workflow_dispatch" and print(tg("sendMessage", chat_id=CHAT, text="Test OK: bot is connected"))
         return
 
     if CHAT:
